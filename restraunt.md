@@ -1,3 +1,11 @@
+# 🌦️ Time & Context
+
+📅 Time: 2026.04  
+📍 Location: Dresden, Germany  
+🌤️ Weather: Sunny 
+
+---
+
 # Restaurant POS System – Design Overview
 
 Hi
