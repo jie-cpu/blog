@@ -23,45 +23,24 @@ Because of this, I designed the system as a **multi-layer distributed architectu
 
 # System Architecture
 
-
-                    ┌──────────────────────────────┐
-                    │        Admin Dashboard       │
-                    │     Vue.js + Element UI      │
-                    └──────────────┬───────────────┘
-                                   │
-                                   │ REST API
-                                   ▼
-    ┌────────────────────────────────────────────────────┐
-    │                 Backend Services                   │
-    │               Java Spring Boot APIs                │
-    │                                                    │
-    │   • Order Management                               │
-    │   • Menu Management                                │
-    │   • Inventory System                               │
-    │   • User / Membership System                       │
-    │   • Payment Processing                             │
-    └───────────────┬───────────────────────┬──────────—─┘
-                    │                       │
-                    │ REST API              │ Database
-                    ▼                       ▼
-          ┌──────────────────┐     ┌──────────────────────┐
-          │  POS Terminal    │     │      Database        │
-          │  Embedded C/C++  │     │ Orders / Menu /      │
-          │                  │     │ Users / Inventory    │
-          │ • Order Entry    │     └──────────────────────┘
-          │ • Menu Select    │
-          │ • Payment Trigger│
-          │ • Offline Cache  │
-          └─────────┬────────┘
-                    │
-                    ▼
-    ┌──────────────────────────────────────────────┐
-    │           External Integrations              │
-    │                                              │
-    │   🖨 Kitchen Printer                         │
-    │   💳 WeChat / Alipay Payment Gateway         │
-    │   📡 Offline Sync / Network Recovery         │
-    └──────────────────────────────────────────────┘
+POS Terminal
+     │
+     ▼
+Backend Service
+     │
+     ├── Database (Orders / Users / Menu)
+     │
+     ├── Payment Gateway (WeChat / Alipay)
+     │
+     ├── Admin Dashboard API
+     │
+     └── Event Dispatcher
+             │
+             ▼
+       Printer Service
+             │
+             ▼
+          Printer
 ---
 
 # Design Decisions
