@@ -1,6 +1,6 @@
-#  Restaurant POS System – Design Overview
+# Restaurant POS System – Design Overview
 
-Hi 
+Hi
 This is a full-stack restaurant POS system I built to understand how real-world ordering systems are designed and why different components need to work together.
 
 The focus of this project was not just implementation, but **system design decisions**: how to connect embedded devices, backend services, web dashboards, and external systems in a reliable way.
@@ -23,24 +23,16 @@ Because of this, I designed the system as a **multi-layer distributed architectu
 
 # System Architecture
 
-POS Terminal
-     │
-     ▼
-Backend Service
-     │
-     ├── Database (Orders / Users / Menu)
-     │
-     ├── Payment Gateway (WeChat / Alipay)
-     │
-     ├── Admin Dashboard API
-     │
-     └── Event Dispatcher
-             │
-             ▼
-       Printer Service
-             │
-             ▼
-          Printer
+```mermaid
+flowchart TB
+    A[POS Terminal] --> B[Backend Service]
+    B --> C[Database\nOrders / Users / Menu]
+    B --> D[Payment Gateway\nWeChat / Alipay]
+    B --> E[Admin Dashboard API]
+    B --> F[Event Dispatcher]
+    F --> G[Printer Service]
+    G --> H[Printer]
+```
 ---
 
 # Design Decisions
