@@ -1,107 +1,114 @@
-I assume you meant **Markdown (.md)**! Here is the entire project documentation, including the technical blog and your resume experience, wrapped in one clean, copy-pasteable file.
+#  Restaurant POS System – Design Overview
 
-```markdown
-# 🍽️ Restaurant POS System – Full-Stack Engineering Project
+Hi 
+This is a full-stack restaurant POS system I built to understand how real-world ordering systems are designed and why different components need to work together.
 
-This project is a high-performance, distributed Restaurant POS system designed to handle real-time ordering, cloud-based management, and hardware integration.
-
----
-
-## 🏗️ System Architecture
-
-The system utilizes an **Edge-to-Cloud** design to ensure 100% service uptime, even during network instability.
-
-# 🍽️ Restaurant POS System – Full-Stack Engineering Project
-
-This project is a high-performance, distributed Restaurant POS system designed to handle real-time ordering, cloud-based management, and hardware integration.
+The focus of this project was not just implementation, but **system design decisions**: how to connect embedded devices, backend services, web dashboards, and external systems in a reliable way.
 
 ---
 
-## 🏗️ System Architecture
+# Why this system is designed this way
 
-> **Note:** If the diagram below does not render, please view it on a platform that supports Mermaid (like GitHub) or check the fallback image link.
+A restaurant POS system has strict requirements:
 
-### 📊 Logic Flow
-```mermaid
-graph TD
-    subgraph "Frontend & Admin"
-    Dashboard[Admin Dashboard - Vue.js]
-    end
+- Orders must be processed in real time  
+- The system must work even with unstable networks  
+- Multiple roles (staff, manager, kitchen) need different views  
+- External systems like printers and payment gateways must be integrated  
+- Data must stay consistent across all components  
 
-    subgraph "Cloud Backend"
-    API[Spring Boot Server]
-    DB[(MySQL / Redis)]
-    end
-
-    subgraph "Edge Terminal (The POS)"
-    POS[POS Terminal - C++/Embedded]
-    Cache[(Local SQLite Cache)]
-    end
-
-    subgraph "External Integrations"
-    Print[Kitchen Printer - ESC/POS]
-    Pay[Payment Gateway - WeChat/Alipay]
-    end
-
-    Dashboard <-->|REST API| API
-    API <--> DB
-    POS <-->|REST API| API
-    POS --- Cache
-    POS --> Print
-    POS --> Pay
+Because of this, I designed the system as a **multi-layer distributed architecture**.
 
 ---
 
-## 🚀 Key Technical Highlights
+# System Architecture
 
-### 1. Resilient Edge Terminal (C/C++)
-The POS terminal is built for mission-critical stability using a **Local-First** data strategy:
-* **Offline Continuity:** Implemented a local SQLite caching layer to allow uninterrupted order entry during network outages.
-* **Smart Sync:** Developed an idempotent synchronization protocol that pushes cached data to the cloud automatically once the connection is restored, ensuring zero data loss.
-* **Hardware Interfacing:** Direct integration with **ESC/POS** kitchen printers and barcode scanners for low-latency hardware response.
 
-### 2. Robust Backend Engine (Java & Spring Boot)
-The "Brain" of the system handles high-concurrency business logic:
-* **Unified API Design:** Standardized RESTful interfaces to serve both low-power embedded terminals and high-concurrency web clients.
-* **Transaction Integrity:** Ensured strict consistency between third-party payment status (WeChat/Alipay) and internal order fulfillment via webhook handling.
-* **Performance:** Optimized query speeds using **Redis** for frequently accessed menu and membership data.
+                    ┌──────────────────────────────┐
+                    │        Admin Dashboard       │
+                    │     Vue.js + Element UI      │
+                    └──────────────┬───────────────┘
+                                   │
+                                   │ REST API
+                                   ▼
+    ┌────────────────────────────────────────────────────┐
+    │                 Backend Services                   │
+    │               Java Spring Boot APIs                │
+    │                                                    │
+    │   • Order Management                               │
+    │   • Menu Management                                │
+    │   • Inventory System                               │
+    │   • User / Membership System                       │
+    │   • Payment Processing                             │
+    └───────────────┬───────────────────────┬──────────—─┘
+                    │                       │
+                    │ REST API              │ Database
+                    ▼                       ▼
+          ┌──────────────────┐     ┌──────────────────────┐
+          │  POS Terminal    │     │      Database        │
+          │  Embedded C/C++  │     │ Orders / Menu /      │
+          │                  │     │ Users / Inventory    │
+          │ • Order Entry    │     └──────────────────────┘
+          │ • Menu Select    │
+          │ • Payment Trigger│
+          │ • Offline Cache  │
+          └─────────┬────────┘
+                    │
+                    ▼
+    ┌──────────────────────────────────────────────┐
+    │           External Integrations              │
+    │                                              │
+    │   🖨 Kitchen Printer                         │
+    │   💳 WeChat / Alipay Payment Gateway         │
+    │   📡 Offline Sync / Network Recovery         │
+    └──────────────────────────────────────────────┘
+---
 
-### 3. Management Dashboard (Vue.js & Element UI)
-A data-driven control center for restaurant operations:
-* **Real-time Monitoring:** Live tracking of order statuses and inventory levels via reactive frontend components.
-* **Business Intelligence:** Data visualization for sales trends, staff performance, and inventory turnover.
+# Design Decisions
+
+## 1. POS Terminal as an independent client
+- Fast and responsive for staff usage  
+- Can operate in offline mode  
+- Reduces dependency on backend availability  
+
+## 2. Backend as central business layer
+- Ensures data consistency  
+- Handles all business logic (orders, menu, payments)  
+- Provides unified APIs for all clients  
+
+## 3. Admin dashboard separated
+- Dedicated system for management and analytics  
+- Avoids mixing operational and admin workflows  
+- Can evolve independently  
+
+## 4. External integrations isolated
+- Printer and payment gateways are external systems  
+- Require failure handling and retries  
+- Should not block core ordering flow  
+
+## 5. Offline-first POS design
+- Ensures restaurant continues operating without network  
+- Orders cached locally  
+- Sync when connection is restored  
 
 ---
 
-## 🛠️ Tech Stack
+# Core Idea
 
-| Layer | Technology |
-| :--- | :--- |
-| **Backend** | Java 17, Spring Boot, MyBatis, MySQL, Redis |
-| **Frontend** | Vue.js 3, Element UI, Axios |
-| **Embedded** | C/C++, SQLite, ESC/POS Protocol |
-| **Infrastructure** | Docker, Kubernetes (K8s), Tencent Cloud |
+> The system is designed so that the restaurant can continue operating even if parts of the system fail.
 
----
-
-## 📈 Engineering Impact
-* **Reliability:** Successfully handled 100% of orders during simulated network failures via the Offline Sync Mechanism.
-* **Efficiency:** Reduced peak-hour order processing latency by **20%** through C++ memory optimization and backend API refactoring.
-* **Scalability:** Containerized the entire stack for rapid deployment and horizontal scaling across multiple restaurant branches.
+This is achieved by separating:
+- UI layer (POS / Admin)
+- Business logic (Backend)
+- External dependencies (Printer / Payment)
+- Offline resilience (Sync mechanism)
 
 ---
 
-## 📄 Resume Experience (Optimized)
+# Summary
 
-**Backend Development Intern | Manyouwei Catering Service | 2023.01 – 2023.06**
+This project helped me understand that system design is not about adding features, but about:
 
-* **Architecture:** Co-developed a distributed POS system using **Spring Boot** and **C/C++**, bridging embedded hardware with cloud services.
-* **Reliability:** Designed an **Offline Sync Mechanism** that ensured zero data loss during network outages, maintaining 100% service availability.
-* **Integration:** Integrated **WeChat/Alipay APIs** and **ESC/POS** protocols for automated payment processing and kitchen ticket printing.
-* **Cloud Native:** Deployed the system using **Docker & K8s** on Tencent Cloud to support high-concurrency peak hours and automated scaling.
-
----
-
-## 📝 Summary
-Building this POS system provided deep insights into **Software-Hardware Integration** and **Distributed Systems**. It addresses real-world challenges like data consistency and system reliability in mission-critical, high-traffic environments.
-```
+- clear separation of responsibilities  
+- handling failure scenarios  
+- ensuring reliability in real-world conditions  
