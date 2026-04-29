@@ -11,18 +11,44 @@ This project is a high-performance, distributed Restaurant POS system designed t
 
 The system utilizes an **Edge-to-Cloud** design to ensure 100% service uptime, even during network instability.
 
+# 🍽️ Restaurant POS System – Full-Stack Engineering Project
+
+This project is a high-performance, distributed Restaurant POS system designed to handle real-time ordering, cloud-based management, and hardware integration.
+
+---
+
+## 🏗️ System Architecture
+
+> **Note:** If the diagram below does not render, please view it on a platform that supports Mermaid (like GitHub) or check the fallback image link.
+
+### 📊 Logic Flow
 ```mermaid
 graph TD
-    A[POS Terminal - C++/Embedded] -->|REST API| B[Backend Service - Java Spring Boot]
-    B --> C[(MySQL / Redis)]
-    B --> D[Admin Dashboard - Vue.js]
-    A --> E[Kitchen Printer - ESC/POS]
-    A --> F[Payment Gateway - WeChat/Alipay]
-    
-    subgraph "Edge Layer (Local Connectivity)"
-    A --- G[(Local SQLite Cache)]
+    subgraph "Frontend & Admin"
+    Dashboard[Admin Dashboard - Vue.js]
     end
-```
+
+    subgraph "Cloud Backend"
+    API[Spring Boot Server]
+    DB[(MySQL / Redis)]
+    end
+
+    subgraph "Edge Terminal (The POS)"
+    POS[POS Terminal - C++/Embedded]
+    Cache[(Local SQLite Cache)]
+    end
+
+    subgraph "External Integrations"
+    Print[Kitchen Printer - ESC/POS]
+    Pay[Payment Gateway - WeChat/Alipay]
+    end
+
+    Dashboard <-->|REST API| API
+    API <--> DB
+    POS <-->|REST API| API
+    POS --- Cache
+    POS --> Print
+    POS --> Pay
 
 ---
 
