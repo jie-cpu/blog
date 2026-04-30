@@ -10,6 +10,7 @@
           {
             "id": "fb61cbd827b63d47",
             "type": "tabs",
+            "dimension": 66.94444444444444,
             "children": [
               {
                 "id": "738a07d45949dbea",
@@ -30,6 +31,7 @@
           {
             "id": "3681ec67bcfb5f42",
             "type": "tabs",
+            "dimension": 33.05555555555556,
             "children": [
               {
                 "id": "266aebc6a9b5df75",
@@ -201,12 +203,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "readme.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from readme"
+              "title": "Outgoing links"
             }
           },
           {
@@ -282,7 +283,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "b8e50281bd63a341",
+  "active": "485e61b1cfe19bc1",
   "lastOpenFiles": [
     "hi/restraunt.md",
     "no",
