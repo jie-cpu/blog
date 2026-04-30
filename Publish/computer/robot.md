@@ -1,3 +1,0 @@
-- i like robot
-- i hate human
-- 
