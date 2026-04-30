@@ -18,12 +18,12 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Publish/LLM/concept/mcp.md",
+                    "file": "Publish/n8n/automate workflow.md",
                     "mode": "source",
                     "source": false
                   },
                   "icon": "lucide-file",
-                  "title": "mcp"
+                  "title": "automate workflow"
                 }
               }
             ]
@@ -72,7 +72,7 @@
                   },
                   "pinned": true,
                   "icon": "terminal",
-                  "title": "Terminal: jackpeng@Jacks-MacBook-Air:~/Desktop/Blog"
+                  "title": "Terminal: jackpeng@Jacks-MacBook-Air:~/Desktop/Blog/publish/German"
                 }
               }
             ]
@@ -254,10 +254,12 @@
   },
   "active": "738a07d45949dbea",
   "lastOpenFiles": [
-    "Publish/LLM/concept/agent.md",
-    "Publish/LLM/concept/mcp.md",
-    "Publish/LLM/concept",
+    "Publish/n8n/automate workflow.md",
+    "Publish/n8n",
     "Publish/Git/how to new repo.md",
+    "Publish/LLM/concept/mcp.md",
+    "Publish/LLM/concept/agent.md",
+    "Publish/LLM/concept",
     "Publish/German/vocabulary.md",
     "Publish/Docker/concept/image.md",
     "Publish/Docker/concept/container.md",
@@ -277,7 +279,6 @@
     "Publish/computer/robot.md",
     "Publish/German",
     "Publish/computer",
-    "no",
     "README.md",
     "readme.md"
   ]
