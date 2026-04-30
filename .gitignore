@@ -1,0 +1,9 @@
+# ignore all
+*
+
+# keep Publish
+!.gitignore
+!Publish/
+
+# keep all content in Publish
+!Publish/**
