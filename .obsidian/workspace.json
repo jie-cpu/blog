@@ -18,7 +18,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Publish/n8n/automate workflow.md",
+                    "file": "n8n/automate workflow.md",
                     "mode": "source",
                     "source": false
                   },
@@ -252,10 +252,11 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "738a07d45949dbea",
+  "active": "80308a7007a23f8f",
   "lastOpenFiles": [
-    "Publish/n8n/automate workflow.md",
-    "Publish/n8n",
+    "Publish/Untitled",
+    "n8n/automate workflow.md",
+    "n8n",
     "Publish/Git/how to new repo.md",
     "Publish/LLM/concept/mcp.md",
     "Publish/LLM/concept/agent.md",
