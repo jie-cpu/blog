@@ -7,8 +7,6 @@ description: Optional short description
 ----
 ## **💡 1. Core Questions & Answers**
 
-### 
-
 ### **1.**
 
 **How do I configure Git to only track the** **`Publish/`** **folder?**
@@ -34,9 +32,6 @@ Git evaluates `.gitignore` rules **top-down**, and later rules override earlier 
 But this only affects **untracked files**. If a file is already in the index, `.gitignore` does nothing. That’s why you needed to reset the index (see next question).
 
 ---
-
-### 
-
 ### **2.**
 
 **Why did I need** **`git rm -r --cached .`****?**
@@ -69,9 +64,6 @@ git add .
 Now Git re-adds files **respecting** **`.gitignore`** **rules**, so only `Publish/` enters the index.
 
 ---
-
-### 
-
 ### **3.**
 
 **Why did Git show** **`delete mode 100644`****?**
@@ -92,9 +84,6 @@ So Git interprets this as:
 Git is not deleting files locally. It’s updating the **tree object** in the next commit.
 
 ---
-
-### 
-
 ### **4.**
 
 **Why are my local files still there after “deletion”?**
@@ -117,9 +106,6 @@ So:
 |Repo (next commit)|updated|
 
 ---
-
-### 
-
 ### **5.**
 
 **Why did** **`git commit`** **say “nothing to commit”?**
@@ -144,9 +130,6 @@ In your case:
 So Git correctly blocks redundant commits.
 
 ---
-
-### 
-
 ### **6.**
 
 **What does “branch is ahead of origin/main by 1 commit” mean?**
@@ -170,9 +153,6 @@ So Git tells you:
 “You have commits not yet pushed”
 
 ---
-
-### 
-
 ### **7.**
 
 **What actually happens during** **`git push`****?**
@@ -206,9 +186,6 @@ Because your new commit removed files, the remote repo will:
 - Eventually garbage collect them
 
 ---
-
-### 
-
 ### **8.**
 
 **Why** **`.gitignore`** **doesn’t affect already committed files?**
@@ -223,6 +200,17 @@ Git does **not retroactively apply rules** to history or tracked files.
 
 This is a design choice to avoid accidental data loss.
 
+### 
+
+### **9.**
+
+**Why can I see** **`.gitignore`** **on GitHub but not with** **`ls -l`****?**
+
+**Mechanics:**
+
+- Files starting with `.` are **hidden by convention** in Unix-like systems
+- `ls -l` does not show dotfiles; `ls -a` does
+- GitHub shows repository contents independent of OS visibility conventions
 ---
 
 ## **🕵️ 2. Key Misconceptions & Blind Spots**
