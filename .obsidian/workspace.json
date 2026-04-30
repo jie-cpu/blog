@@ -10,16 +10,20 @@
           {
             "id": "fb61cbd827b63d47",
             "type": "tabs",
-            "dimension": 80,
+            "dimension": 57.407407407407405,
             "children": [
               {
                 "id": "738a07d45949dbea",
                 "type": "leaf",
                 "state": {
-                  "type": "empty",
-                  "state": {},
+                  "type": "markdown",
+                  "state": {
+                    "file": "Publish/LLM/concept/mcp.md",
+                    "mode": "source",
+                    "source": false
+                  },
                   "icon": "lucide-file",
-                  "title": "New tab"
+                  "title": "mcp"
                 }
               }
             ]
@@ -27,7 +31,7 @@
           {
             "id": "6b07cee9856a49ed",
             "type": "tabs",
-            "dimension": 20,
+            "dimension": 42.592592592592595,
             "children": [
               {
                 "id": "d16c1947ae328f72",
@@ -248,11 +252,20 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "485e61b1cfe19bc1",
+  "active": "738a07d45949dbea",
   "lastOpenFiles": [
+    "Publish/LLM/concept/agent.md",
+    "Publish/LLM/concept/mcp.md",
+    "Publish/LLM/concept",
+    "Publish/Git/how to new repo.md",
+    "Publish/German/vocabulary.md",
+    "Publish/Docker/concept/image.md",
+    "Publish/Docker/concept/container.md",
+    "Publish/Docker/concept",
+    "Publish/Projects/rag-k8s/RAG, Cloud & Kubernetes.md",
+    "no/Untitled.md",
     "Publish/Untitled.md",
     "Publish/today.md",
-    "Publish/Projects/rag-k8s/RAG, Cloud & Kubernetes.md",
     "Publish/Projects/rag-k8s/deployment Q&A.md",
     "Publish/Projects/restraunt.md",
     "Publish/Projects/rag-k8s",
@@ -265,9 +278,7 @@
     "Publish/German",
     "Publish/computer",
     "no",
-    "Publish",
     "README.md",
-    "readme.md",
-    "Untitled 1.base"
+    "readme.md"
   ]
 }
