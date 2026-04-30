@@ -17,7 +17,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "hi/computer/llm.md",
+                    "file": "Publish/computer/llm.md",
                     "mode": "source",
                     "source": false
                   },
@@ -250,15 +250,15 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "738a07d45949dbea",
+  "active": "80308a7007a23f8f",
   "lastOpenFiles": [
-    "hi/computer/robot.md",
-    "hi/computer/llm.md",
-    "hi/computer",
-    "hi/today.md",
-    "hi/restraunt.md",
+    "Publish/computer/robot.md",
+    "Publish/computer/llm.md",
+    "Publish/computer",
+    "Publish/today.md",
+    "Publish/restraunt.md",
     "no",
-    "hi",
+    "Publish",
     "README.md",
     "readme.md",
     "Untitled 1.base",
