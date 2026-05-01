@@ -1,0 +1,26 @@
+- course title: Digitization and Data Analytics architectures, methods, consequences
+     - big data through digitization and then data being analyzed to value?
+     - data: (5V)
+        - volume, from KB to TB (rest)
+        - velocity, milliseconds to seconds(motion)
+        - variety, text, structured, unstructured(forms)
+        - veracity, uncertainty, data inconsistency(doubt)
+        - value, extract new content from database
+    - data lifecycle
+	    - data created/ collected->data processed->data analysed->data published->data archived->data reused-
+	- data analytics goals and challenges
+	    - predict future events based on known data(have enough known data)
+	        - weather forecast
+	        - image recognition
+	        - speech understanding
+	    - detect unknown structures and relations in large amounts of data(no semantics, ground truth)
+	        - marketing data
+	        - sensor data
+	    - requirements
+	        - hardware evolution
+	    - architecture
+	        -  parallelism
+	        - multicore processors
+	        - SIMD(single instruction multiple data)
+	        - MIMD(multiple instructions multiple data)
+	    

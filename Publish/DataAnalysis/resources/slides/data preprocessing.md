@@ -1,0 +1,21 @@
+- data driven research: goal extract information out of given data
+- idea: big data->data preprocessing-> smart data
+- data preprocessing pipeline(order not fixed)
+    - [[data cleaning]](handle inconsistent or missing data)
+    - [[data integration]](obtained from multiple sources)
+    - [[data transformation]]
+    - [[data reduction]](efficiency)
+    - [[feature extraction]](meaningful data from raw)
+- data analysis
+    - prediction 
+    - exploration(pure data without contextual information is useless)
+    - modeling
+- quality of data
+     - accuracy
+     - completeness
+     - consistency
+     - timeliness
+     - believability
+     - interpretability
+- cleaning and organizing data is most time consuming and least enjoyable
+- principle: garbage in garbage out

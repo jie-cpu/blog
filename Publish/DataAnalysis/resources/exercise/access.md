@@ -1,0 +1,4 @@
+- cp -r /projects/p_lv_digitization_25/04-BasicsOfStatistics .
+- . means current dir
+- -r means recursive
+- cd /projects/p_lv_digitization_25/
