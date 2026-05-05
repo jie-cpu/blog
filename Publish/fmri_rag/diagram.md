@@ -1,4 +1,4 @@
-- ## RAG Inference (Online)
+- ##  Index Building (Offline)
 ```mermaid
 flowchart TB
     A[Raw fMRI Signals] --> B[Preprocessing]
