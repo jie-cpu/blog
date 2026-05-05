@@ -1,4 +1,4 @@
-## Hiring Manager FAQ
+
 
 **Q: What makes this different from AutoGPT or simple agent loops?**
 

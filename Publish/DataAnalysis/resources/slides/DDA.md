@@ -8,7 +8,7 @@
 
 # Related Concepts
 
-*  [[Intro]]
+*  [[Publish/DataAnalysis/resources/slides/Intro]]
 * [[machine learning 1]]
 * [[machine learning 2]]
 * [[machine learning 3]]

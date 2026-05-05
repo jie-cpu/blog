@@ -6,7 +6,6 @@ description: Optional short description
 ---
 ----
 
-## Interview Talking Points
 
 If you're reviewing this project for a hiring conversation:
 
