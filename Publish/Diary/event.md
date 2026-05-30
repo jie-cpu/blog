@@ -1,0 +1,6 @@
+- say hi, how are you
+- can we have a short talk
+- so um, my name is .... and i am a ..
+- may i ask what do you do or what does your company do?
+- 
+- 
