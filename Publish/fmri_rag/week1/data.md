@@ -1,0 +1,6 @@
+- 10 people texts specific
+- input of the model, pre-process
+- understand the https://arxiv.org/abs/2511.21760
+- understand how the data, results, what are they learning
+- 
+- 

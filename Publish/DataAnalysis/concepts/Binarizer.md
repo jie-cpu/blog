@@ -52,4 +52,4 @@ $$
 - [[StandardScaler]]
 - [[MinMaxScaler]]
 - [[Normalization]]
-- [[Preprocessing]]
+- [[preprocessing]]

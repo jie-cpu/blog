@@ -1,0 +1,5 @@
+- send michael dataset paper
+- example for one subject one video and one annotation how does it look like
+- find out the tr for the fmri =1.75
+- genaral linaer model, watch youtube
+- 

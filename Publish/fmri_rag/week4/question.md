@@ -1,0 +1,3 @@
+- why tr =1.75s, is it a machine limit
+- how fmri forms by beta
+- 

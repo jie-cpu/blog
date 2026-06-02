@@ -47,5 +47,5 @@ Text Data                    Numerical Data
 - [[Word Embeddings]]
 - [[Bag of Words]]
 - [[NLP]]
-- [[Preprocessing]]
+- [[preprocessing]]
 
