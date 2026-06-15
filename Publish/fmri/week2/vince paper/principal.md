@@ -1,1 +1,0 @@
-**fMRI-LM paper**, the researchers are trying to get an AI (the LLM) to "read" these BOLD signal patterns from a person at rest (resting-state fMRI) and describe that person's characteristics (like age, gender, or cognitive health) in plain English.
