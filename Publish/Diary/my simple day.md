@@ -5,4 +5,4 @@ updated: 2026-04-28
 description: Optional short description
 ---
 ----
-you start to write here
+![[avatar.png]]
