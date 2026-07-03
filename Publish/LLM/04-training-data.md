@@ -1,0 +1,7 @@
+- pipeline
+	- crawling from world wide web
+	- HTML to text conversion
+	- Language identification
+	- Harmful content filtering
+	- Rule based quality filtering
+	- Model based quality filtering

@@ -1,0 +1,43 @@
+-  PyTorch 
+	- a open source deep learning framework developed by meta
+	- used for training and running neural networks
+	- GPU support for faster training and inference 
+	- advantages: usability and flexibility through dynamic computational graph system
+- Tensors
+	- specialized data structure that are very similar to arrays and matrices
+	- in PyTorch we use tensors to encode the inputs and outputs of a model, as well as the model's parameters
+- single perceptron
+	- feature and label 
+	- binary classification: 
+- multi layer perceptron
+	- A ReLU  rectified linear unit is applied between each layer
+	- A sigmoid activation function is applied on output layer to ensure its value between 0 and 1
+- Train a Neural Network in PyTorch 
+	- dataset to know what the dataset looks like, input and target
+	- loss function to evaluate the goodness of fit of the model data
+		- binary classification: binary cross entropy 
+	- optimization algorithm of parameters-- learning rate
+		- gradient decent is the algorithm to optimize the neural networks ---Adam is one of the most used 
+- batch size 
+	- controls how often model parameters are updated and how noisy each update is
+	- small batch size: noisier loss curve, faster updates and lower memory usage
+	- large batch size: smoother loss curve, slower updates and higher memory usage 
+	- no batch size: very smooth loss curve but slow convergence only one update per epoch 
+- Test the Model
+- Overfitting and Possible solutions 
+	- if you train a model with a high number of epochs > 1000
+	- training loss: will continue to decrease, suggesting the model is fitting well on the training data
+	- Validation Loss: will decrease initially but will then start increasing, indicating that the model is not generalizing well and is overfitting the training data
+	- Accuracy: the training accuracy will be very high, but the validation accuracy will start to drop after some point
+	- Solutions:
+		- batch normalization
+			- helps to stabilize and accelerate training by normalizing the input of each layer to have a mean of 0 and variance of 1, this leads to faster convergence and help prevent overfitting
+			- can improve generalization 
+		- dropout 
+			- is a regularization technique that randomly drops out or ignores a subset of neurons during each training step
+			- earlier layer has higher dropout and later layer has lower dropout
+		- Optimizers 
+			- SGD
+			- Adam
+			- RMSprop
+			- AdaGrad

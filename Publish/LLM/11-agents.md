@@ -1,0 +1,77 @@
+- What makes an LLM agent
+	- an agent is an LLM that can do things in the world, not just talk about them
+	- core components
+		- tool use: can call external functions/ APIs(web search, calculators, datasets)
+		- memory: access to conversation history and context to maintain state
+		- planning: can break down complex tasks into steps and reason about how to achieve goals
+		- action observation loop: iteratively acts, observes results and adjusts approach
+		- autonomy: can make decisions about which tools to use and when 
+- function calling
+	- llm translate the natural language requests into structured function calls that can be executed by external systems
+	- the reason for using is to provide real time data to LLM
+		- fetch current information
+		- interact with database and api
+		- performing calculations and data precessing
+		- execute actions in external systems
+	- types:
+		- single function call
+		- sequential 
+		- parallel/ DAG (directed Acyclic Graph)
+# llm function calling - vanilla implementation
+- 1. define tool schemas
+	- json schema
+	- name (function identifier)
+	- description(what does it do)
+	- parameters(input arguments with types)
+- 2. translation function 
+	- convert natural language to function calls
+- command mapper
+- complete example
+# llm function calling - MCP server
+- what is MCP
+	- model context protocol
+	- it is a standardized protocol for connecting llm agents with tools and data sources
+- what is mcp server
+	- An MCP server is a tool backend built according to the MCP protocol, and an LLM uses it via MCP to perform task
+- why do we use mcp
+	- any mcp client( Claude desktop, LangGraph, DsPy) can use, improve usability
+	- server code stays separate from agent logic
+# agent patterns
+- agentic frameworks
+	- LangChain
+	- LangGraph
+	- CrewAI
+	- DSPy
+- two core patterns
+	- tool binding
+		- llm decides which tools to call
+		- llm needs to perform actions(search, calculate, call APIs, execute code)
+	- structured output
+		- llm returns predefined schema
+		- parse/ extract data into a specific format 
+-  framework comparison
+	- LangGraph
+		- need full control and complex logic
+	- DSPy
+		- want to optimize performance
+	- CrewAI
+		- need quick prototype with teams
+	- LangFlow
+		- building demo or learning 
+	- LangChain
+		- just starting out
+# DSPy MCP Client - intelligent Agent Integration
+- connect DSPy agents to MCP servers for powerful tool integration
+	- DSPy is a declarative framework for programming with language models, lets you define what you want not how to prompt for it
+	- key words
+		- signatures
+			- define what llm should do not how
+		- ReAct(Reasoning + Acting)
+		- MCP integration 
+			- DSPy provides declarative agent logic()
+			- MCP provides reusable and standardized tools
+			- together can build intelligent agents without manual prompt engineering
+			- one MCP server can serve many DSPy agents
+		- agent chaining
+			- output from one agent becomes the input of another
+			- 
