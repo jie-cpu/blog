@@ -1,0 +1,10 @@
+- shrewdness
+- mellifluous
+	- I think one of the highlights was the day I found you in the art gallery, it was raining, I looked into the window and you was there, with your cury little hair winding down from your forehead, you looked artistically stunning, full of shrewdness and elegance, checking up those paintings, while listening to the mellifluous piano. You looked like a lady who lives in high society.
+- Diaphanous
+	- He finally made up his mind, took the money, hopped on a train and travelled all the way to Köln. It all sounds just like a diaphanous dream.
+- vicissitudes
+	- Dresden was once devastated, yet it rose from the ashes, was reborn, and emerged stronger than ever.Life is much the same. It is full of ups and downs, challenges, adversity, and vicissitudes. We all have our darkest moments, but as long as we keep moving forward and believe in ourselves, rebirth is always possible
+- beguile/beguiling
+- ineffable
+- Auspicious
