@@ -5,6 +5,9 @@
 	- He finally made up his mind, took the money, hopped on a train and travelled all the way to Köln. It all sounds just like a diaphanous dream.
 - vicissitudes
 	- Dresden was once devastated, yet it rose from the ashes, was reborn, and emerged stronger than ever.Life is much the same. It is full of ups and downs, challenges, adversity, and vicissitudes. We all have our darkest moments, but as long as we keep moving forward and believe in ourselves, rebirth is always possible
-- beguile/beguiling
+- beguile/ beguiling
+	- Nurses in children's hospitals always beguile young kids with a lollipop into getting vaccinated.
 - ineffable
+	- The girl over there in a blue dress with red lips has an ineffable beauty! The moment men meet her eyes, they are instantly captivated.
 - Auspicious
+	- The money tree carries a very auspicious meaning, I hope it can bring you wealth and good fortune.
