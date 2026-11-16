@@ -3,8 +3,6 @@ date: 2026-11-16
 updated: 2026-11-16
 description:
 ---
-----
-you start to write here
 I used to think that loving myself meant buying myself nice clothes, eating delicious food, and doing everything I could to make up for what I didn't receive as a child.
 
 But this year, I've gradually come to realize that this isn't necessarily what self-love means. Sometimes, it's more like spoiling yourself.
