@@ -3,8 +3,7 @@ date: 2026-11-22
 updated: 2026-11-22
 description:
 ---
-----
-you start to write here
+
 One principle I want to live by is: **be agreeable in attitude, but independent in action.**
 
 Not every disagreement deserves an argument. Winning an emotional battle often costs more than it gives. You may prove your point, but lose your peace of mind, damage a relationship, and gain nothing in return.
